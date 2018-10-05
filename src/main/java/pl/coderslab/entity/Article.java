@@ -2,6 +2,7 @@ package pl.coderslab.entity;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -69,9 +70,8 @@ public class Article {
     }
 
     public void setCreated(String created) {
-        created = LocalDateTime.now().toString();
-        LocalDateTime datetime = LocalDateTime.parse(created, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.S"));
-        created = datetime.toString();
+        LocalDateTime datetime = LocalDateTime.now();
+        created = datetime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.S"));
         this.created = created;
     }
 
@@ -80,9 +80,8 @@ public class Article {
     }
 
     public void setUpdated(String updated) {
-        updated = LocalDateTime.now().toString();
-        LocalDateTime datetime = LocalDateTime.parse(updated, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.S"));
-        updated = datetime.toString();
+        LocalDateTime localDateTime = LocalDateTime.now();
+        updated = localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.S"));
         this.updated = updated;
     }
 }

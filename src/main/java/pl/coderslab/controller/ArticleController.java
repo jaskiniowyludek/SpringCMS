@@ -7,10 +7,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import pl.coderslab.dao.ArticleDao;
 import pl.coderslab.dao.AuthorDao;
 import pl.coderslab.dao.CategoryDao;
+import pl.coderslab.entity.Article;
 import pl.coderslab.entity.Author;
 import pl.coderslab.entity.Category;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 @Controller
 public class ArticleController {
@@ -99,7 +103,21 @@ public class ArticleController {
                         "pastels. The time has come for the mosquitoes to fulfill the purpose for which they were genetically" +
                         " engineered: a kamikaze mission to eliminate their own species."
         };
-        List<Category> categories = categoryDao.findAll();
+        Random random = new Random();
+        for (int i = 0; i<10; i++){
+            Article article = new Article();
+            article.setTitle(title[i]);
+            article.setContent(content[i]);
+            String created = LocalDateTime.now().toString();
+            article.setCreated(created);
+            article.setAuthor(authorDao.findById(Long.valueOf(i)));
+            List<Category> arr = new ArrayList<>();
+            if(i<3) arr.add(categoryDao.findById(random.nextInt(10)+1));
+            if(i<5) arr.add(categoryDao.findById(random.nextInt(10)+1));
+            if(i<9) arr.add(categoryDao.findById(random.nextInt(10)+1));
+            article.setCategories(arr);
+            articleDao.save(article);
+        }
         return "10 articles added";
     }
 }
