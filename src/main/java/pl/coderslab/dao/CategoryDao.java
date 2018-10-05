@@ -6,6 +6,8 @@ import pl.coderslab.entity.Category;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import java.util.List;
 
 @Component
 @Transactional
@@ -25,5 +27,10 @@ public class CategoryDao {
     }
     public void delete(Category c){
         entityManager.remove(entityManager.contains(c) ? c : entityManager.merge(c));
+    }
+    public List<Category> findAll(){
+        Query query = entityManager.createQuery("select c from Category  c");
+        List<Category> categories = query.getResultList();
+        return categories;
     }
 }
