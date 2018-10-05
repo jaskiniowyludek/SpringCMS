@@ -18,7 +18,7 @@
 <h2>See categories: </h2>
 <ul>
 <c:forEach items="${categories}" var="category">
-    <li>${category.name}</li>
+    <li><a href="/showArticlesInCategory/${category.id}">${category.name}</a></li>
 </c:forEach>
 </ul>
 </body>

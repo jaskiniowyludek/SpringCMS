@@ -1,6 +1,8 @@
 package pl.coderslab.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "categories")
@@ -12,11 +14,21 @@ public class Category {
     @Column(length = 100)
     private String name;
     private String description;
+    @ManyToMany(fetch = FetchType.EAGER)
+    List<Article> articles = new ArrayList<>();
 
     public Category(){}
     public Category(String name, String description){
         this.name = name;
         this.description = description;
+    }
+
+    public List<Article> getArticles() {
+        return articles;
+    }
+
+    public void setArticles(List<Article> articles) {
+        this.articles = articles;
     }
 
     public String getName() {
