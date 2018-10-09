@@ -14,7 +14,12 @@ public class Category {
     @Column(length = 100)
     private String name;
     private String description;
-    @ManyToMany(fetch = FetchType.EAGER)
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "categories")
     List<Article> articles = new ArrayList<>();
 
     public Category(){}

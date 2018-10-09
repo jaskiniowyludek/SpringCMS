@@ -45,13 +45,6 @@ public class CategoryController {
         Category category = categoryDao.findById(id);
         return "Category found: "+category.getName();
     }
-    @RequestMapping("/deletecategory/{id}")
-    @ResponseBody
-    public String delete(@PathVariable long id){
-        Category category = categoryDao.findById(id);
-        categoryDao.delete(category);
-        return "Category deleted: "+category.getName();
-    }
 
     @RequestMapping("/allcategories")
     public String showAllCategories(){
@@ -79,13 +72,24 @@ public class CategoryController {
         categoryDao.save(category);
         return "redirect:allcategories";
     }
+    @RequestMapping("/deletecategory/{id}")
+    public String delete(@PathVariable long id){
+        Category category = categoryDao.findById(id);
+        categoryDao.delete(category);
+        return "redirect:/allcategories";
+    }
+    @GetMapping("/editcategory/{id}")
+    public String editCategory(Model model, @PathVariable long id){
+        Category category = categoryDao.findById(id);
+        category.setId(id);
+        model.addAttribute("category", category);
+        return "categoryEditForm";
+    }
+    @PostMapping("/editcategory/{id}")
+    public String postEditCategory(@ModelAttribute Category category){
+        categoryDao.update(category);
+        return "redirect:/allcategories";
+    }
 }
 
-//        wyświetlić listę wszystkich kategorii
-//        dodać kategorię
-//        usunąć kategorię
-//        edytować kategorię
-//
-//        Dla akcji dodawania oraz edycji utwórz formularz.
-//        Utwórz linki nawigacyjne umożliwiające przechodzenie między akcjami -
-// bez konieczności znania adresów URL
+//TODO header with links for categories!!

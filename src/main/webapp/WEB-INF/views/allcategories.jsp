@@ -17,7 +17,10 @@
 <ul>
     <c:forEach items="${categories}" var="category">
         <li><b>${category.name}</b>
-       See articles in this category: <a href="/showArticlesInCategory/${category.id}">Click!</a> </li>
+      <p> See articles in this category: <a href="/showArticlesInCategory/${category.id}">Click!</a></p>
+      <p> Delete category: <a href="/deletecategory/${category.id}"
+                              onclick="return confirm('Are you sure you want to delete this category?');">Click! </a></p>
+            <p>Edit category: <a href="/editcategory/${category.id}">Click!</a> </p></li>
     </c:forEach>
 </ul>
 <p><a href="/addcategory">Add new category</a> </p>
