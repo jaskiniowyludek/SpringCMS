@@ -13,6 +13,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import pl.coderslab.converter.ArticleConverter;
+import pl.coderslab.converter.CategoryConverter;
 
 import javax.persistence.EntityManagerFactory;
 
@@ -47,9 +48,12 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     @Override
     public	void	addFormatters(FormatterRegistry registry)	{
         registry.addConverter(getArticleConverter());
+        registry.addConverter(getCategoryConverter());
     }
     @Bean
     public ArticleConverter getArticleConverter()	{
         return	new ArticleConverter();
     }
+    @Bean
+    public CategoryConverter getCategoryConverter(){ return new CategoryConverter();}
 }

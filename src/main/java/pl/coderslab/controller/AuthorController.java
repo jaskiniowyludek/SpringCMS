@@ -83,10 +83,3 @@ public class AuthorController {
         return authors;
     }
 }
-////
-//wyświetlić listę wszystkich autorów
-//    dodać autora
-//    usunąć autora
-//    edytować autora
-//
-//    Dla akcji dodawania oraz edycji utwórz formularz.

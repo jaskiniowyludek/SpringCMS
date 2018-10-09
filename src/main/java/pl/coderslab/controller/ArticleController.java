@@ -2,8 +2,8 @@ package pl.coderslab.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import pl.coderslab.dao.ArticleDao;
 import pl.coderslab.dao.AuthorDao;
 import pl.coderslab.dao.CategoryDao;
@@ -13,6 +13,7 @@ import pl.coderslab.entity.Category;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Random;
 
@@ -119,6 +120,40 @@ public class ArticleController {
             articleDao.save(article);
         }
         return "10 articles added";
+    }
+
+    @RequestMapping("/allarticles")
+    public String showAllArticles(){
+        return "article/allArticles";
+    }
+
+    @GetMapping("/addarticle")
+    public String addArticle(Model model){
+        model.addAttribute("article", new Article());
+        return "article/articleForm";
+    }
+    @PostMapping("/addarticle")
+    public String postAddArticle(@ModelAttribute Article article){
+        article.setCreated(LocalDateTime.now().toString());
+        article.setUpdated(LocalDateTime.now().toString());
+        articleDao.save(article);
+        return "redirect:allarticles";
+    }
+
+    @ModelAttribute("articles")
+    public Collection<Article> articles(){
+        List<Article> articles = articleDao.findAll();
+        return articles;
+    }
+    @ModelAttribute("categories")
+    public Collection<Category> categories(){
+        List<Category> categories = categoryDao.findAll();
+        return categories;
+    }
+    @ModelAttribute("authors")
+    public Collection<Author> authors(){
+        List<Author> authors = authorDao.findAll();
+        return authors;
     }
 }
 
