@@ -20,5 +20,6 @@
        See articles in this category: <a href="/showArticlesInCategory/${category.id}">Click!</a> </li>
     </c:forEach>
 </ul>
+<p><a href="/addcategory">Add new category</a> </p>
 </body>
 </html>

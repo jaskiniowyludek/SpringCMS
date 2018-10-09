@@ -36,4 +36,9 @@ public class ArticleDao {
         List<Article> articles = query.getResultList();
         return articles;
     }
+    public List<Article> findAll(){
+        Query query = entityManager.createQuery("select a from Article a");
+        List<Article> articles = query.getResultList();
+        return articles;
+    }
 }

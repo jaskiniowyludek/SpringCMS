@@ -2,11 +2,11 @@ package pl.coderslab.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+import pl.coderslab.dao.ArticleDao;
 import pl.coderslab.dao.CategoryDao;
+import pl.coderslab.entity.Article;
 import pl.coderslab.entity.Category;
 
 import java.util.ArrayList;
@@ -17,6 +17,8 @@ import java.util.List;
 public class CategoryController {
     @Autowired
     private CategoryDao categoryDao;
+    @Autowired
+    private ArticleDao articleDao;
 
     @RequestMapping("/add10categories")
     @ResponseBody
@@ -61,6 +63,22 @@ public class CategoryController {
         List<Category> categories = categoryDao.findAll();
         return categories;
     }
+    @ModelAttribute("articles")
+    public Collection<Article> articles(){
+        List<Article> articles = articleDao.findAll();
+        return articles;
+    }
+
+    @GetMapping("/addcategory")
+    public String addCategory(Model model){
+        model.addAttribute("category", new Category());
+        return "categoryform";
+    }
+    @PostMapping("/addcategory")
+    public String proceedAddCategory(@ModelAttribute Category category){
+        categoryDao.save(category);
+        return "redirect:allcategories";
+    }
 }
 
 //        wyświetlić listę wszystkich kategorii
@@ -69,4 +87,5 @@ public class CategoryController {
 //        edytować kategorię
 //
 //        Dla akcji dodawania oraz edycji utwórz formularz.
-//        Utwórz linki nawigacyjne umożliwiające przechodzenie między akcjami - bez konieczności znania adresów URL
+//        Utwórz linki nawigacyjne umożliwiające przechodzenie między akcjami -
+// bez konieczności znania adresów URL
