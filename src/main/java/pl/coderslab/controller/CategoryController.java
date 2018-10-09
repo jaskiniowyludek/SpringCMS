@@ -2,6 +2,7 @@ package pl.coderslab.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -9,6 +10,7 @@ import pl.coderslab.dao.CategoryDao;
 import pl.coderslab.entity.Category;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Controller
@@ -48,4 +50,23 @@ public class CategoryController {
         categoryDao.delete(category);
         return "Category deleted: "+category.getName();
     }
+
+    @RequestMapping("/allcategories")
+    public String showAllCategories(){
+        return "allcategories";
+    }
+
+    @ModelAttribute("categories")
+    public Collection<Category> categories(){
+        List<Category> categories = categoryDao.findAll();
+        return categories;
+    }
 }
+
+//        wyświetlić listę wszystkich kategorii
+//        dodać kategorię
+//        usunąć kategorię
+//        edytować kategorię
+//
+//        Dla akcji dodawania oraz edycji utwórz formularz.
+//        Utwórz linki nawigacyjne umożliwiające przechodzenie między akcjami - bez konieczności znania adresów URL
