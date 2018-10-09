@@ -121,3 +121,13 @@ public class ArticleController {
         return "10 articles added";
     }
 }
+
+//    wyświetlić listę wszystkich artykułów
+//    dodać artykuł
+//    usunąć artykuł
+//    edytować artykuł
+//
+//    Dla akcji dodawania oraz edycji utwórz formularz.
+//        Formularz tworzenia ma zawierać pola z możliwością wyboru autora.
+//        Formularz tworzenia ma zawierać pola z możliwością wyboru wielu kategorii.
+//        Dodaj konwertery dla klas Author oraz Category.

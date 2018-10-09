@@ -92,4 +92,4 @@ public class CategoryController {
     }
 }
 
-//TODO header with links for categories!!
+//TODO header with links for categories!! dodawanie artykułów do kategorii nie dziala!!
