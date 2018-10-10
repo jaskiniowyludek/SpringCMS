@@ -91,5 +91,3 @@ public class CategoryController {
         return "redirect:/allcategories";
     }
 }
-
-//TODO header with links for categories!! dodawanie artykułów do kategorii nie dziala!!

@@ -22,7 +22,6 @@
 <form:form modelAttribute="category" method="post">
    Name: <form:input path="name" placeholder="Type name"/>
     Description: <form:textarea path="description" rows="10" cols="20"/>
-    Articles: <form:select path="articles" items="${articles}" itemLabel="title" itemValue="id" multiple="true"/>
     <input type="submit" value="Save">
 </form:form>
 </body>

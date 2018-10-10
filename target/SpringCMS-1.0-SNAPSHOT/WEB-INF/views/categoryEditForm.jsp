@@ -23,7 +23,6 @@
     <form:hidden path="id"/>
     Name: <form:input path="name"/>
     Description: <form:textarea path="description"/>
-    Articles: <form:checkboxes path="articles" items="${articles}" itemValue="id" itemLabel="title"/>
     <input type="submit" value="Save">
 </form:form>
 </body>

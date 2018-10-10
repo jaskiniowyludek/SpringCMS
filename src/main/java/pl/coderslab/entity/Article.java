@@ -23,7 +23,7 @@ public class Article {
     private List<Category> categories = new ArrayList<>();
     @Column(columnDefinition = "TEXT")
     private String content;
-
+    @Column(updatable = false)
     private String created;
 
     private String updated;

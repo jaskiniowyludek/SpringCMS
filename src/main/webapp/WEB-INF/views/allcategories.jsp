@@ -13,6 +13,7 @@
 </head>
 <body>
 <c:import url="/WEB-INF/views/fragments/header.jsp"/>
+<p><a href="/addcategory">Add new category</a> </p>
 <h1>All categories:</h1>
 <ul>
     <c:forEach items="${categories}" var="category">
@@ -23,6 +24,5 @@
             <p>Edit category: <a href="/editcategory/${category.id}">Click!</a> </p></li>
     </c:forEach>
 </ul>
-<p><a href="/addcategory">Add new category</a> </p>
 </body>
 </html>

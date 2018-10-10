@@ -19,7 +19,7 @@ public class Category {
         this.id = id;
     }
 
-    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "categories")
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     List<Article> articles = new ArrayList<>();
 
     public Category(){}
