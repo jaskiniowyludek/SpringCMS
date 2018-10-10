@@ -12,7 +12,7 @@
     <title>Articles in this category</title>
 </head>
 <body>
-
+<c:import url="/WEB-INF/views/fragments/header.jsp"/>
 <h1>Articles in this category: </h1>
 <ul>
 <c:forEach items="${articles}" var="article">
@@ -21,7 +21,7 @@
 </c:forEach>
 </ul>
 <p>
-    <a href="/articles">Come back to all articles</a>
+    <a href="/allarticles">Come back to all articles</a>
 </p>
 </body>
 </html>

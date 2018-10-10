@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: ewelina
@@ -17,6 +18,7 @@
     </style>
 </head>
 <body>
+<c:import url="/WEB-INF/views/fragments/header.jsp"/>
 <form:form method="post" modelAttribute="category">
     <form:hidden path="id"/>
     Name: <form:input path="name"/>

@@ -6,6 +6,7 @@
     <title>All authors</title>
 </head>
 <body>
+<c:import url="/WEB-INF/views/fragments/header.jsp"/>
 <h1>All authors:</h1>
 <ul>
     <c:forEach items="${authors}" var="author">

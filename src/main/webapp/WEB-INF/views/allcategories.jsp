@@ -12,7 +12,7 @@
     <title>All categories</title>
 </head>
 <body>
-
+<c:import url="/WEB-INF/views/fragments/header.jsp"/>
 <h1>All categories:</h1>
 <ul>
     <c:forEach items="${categories}" var="category">

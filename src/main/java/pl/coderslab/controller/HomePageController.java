@@ -21,13 +21,13 @@ public class HomePageController {
     @Autowired
     private CategoryDao categoryDao;
 
-    @RequestMapping("/articles")
+    @RequestMapping("/")
     public String show5articles(Model model){
         List<Article> articles = articleDao.find5articles();
         List<Category> categories = categoryDao.findAll();
         model.addAttribute("categories", categories);
         model.addAttribute("articles", articles);
-        return "last5articles";
+        return "/index";
     }
     @RequestMapping("/showArticlesInCategory/{id}")
     public String show(Model model, @PathVariable long id){

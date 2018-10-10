@@ -12,6 +12,7 @@
     <title>All Articles</title>
 </head>
 <body>
+<c:import url="/WEB-INF/views/fragments/header.jsp"/>
 <h1>All articles:</h1>
 <ul>
     <c:forEach items="${articles}" var="article">

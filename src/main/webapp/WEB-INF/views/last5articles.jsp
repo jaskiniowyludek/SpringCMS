@@ -7,6 +7,7 @@
     <title>The newest articles!!!</title>
 </head>
 <body>
+<c:import url="/WEB-INF/views/fragments/header.jsp"/>
 <h1>The newest articles:</h1>
 <ul>
 <c:forEach items="${articles}" var="article">
