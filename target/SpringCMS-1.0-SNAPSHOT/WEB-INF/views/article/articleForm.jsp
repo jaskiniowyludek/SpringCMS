@@ -10,6 +10,11 @@
 <html>
 <head>
     <title>Add new article</title>
+    <style>
+        input. select{
+            display: block;
+        }
+    </style>
 </head>
 <body>
 <form:form method="post" modelAttribute="article">

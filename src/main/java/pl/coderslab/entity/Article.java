@@ -19,15 +19,20 @@ public class Article {
     @ManyToOne
     private Author author;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Category> categories = new ArrayList<>();
     @Column(columnDefinition = "TEXT")
     private String content;
 
     private String created;
+
     private String updated;
 
     public Article(){}
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public long getId(){
         return id;
@@ -75,6 +80,7 @@ public class Article {
         this.created = created;
     }
 
+
     public String getUpdated() {
         return updated;
     }
@@ -84,4 +90,5 @@ public class Article {
         updated = localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.S"));
         this.updated = updated;
     }
+
 }

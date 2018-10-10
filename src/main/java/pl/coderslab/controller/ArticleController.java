@@ -135,9 +135,29 @@ public class ArticleController {
     @PostMapping("/addarticle")
     public String postAddArticle(@ModelAttribute Article article){
         article.setCreated(LocalDateTime.now().toString());
-        article.setUpdated(LocalDateTime.now().toString());
         articleDao.save(article);
         return "redirect:allarticles";
+    }
+    @GetMapping("/editarticle/{id}")
+    public String editArticle(Model model, @PathVariable long id){
+        Article article = articleDao.findById(id);
+        article.setId(id);
+        model.addAttribute("article", article);
+        model.addAttribute("created", article.getCreated());
+        return "article/articleEditForm";
+    }
+    @PostMapping("/editarticle/{id}")
+    public String postEditArticle(@ModelAttribute Article article, @RequestParam String created){
+        article.setUpdated(LocalDateTime.now().toString());
+        article.setCreated(created);
+        articleDao.update(article);
+        return "redirect:/allarticles";
+    }
+    @RequestMapping("/deletearticle/{id}")
+    public String deleteArticle(@PathVariable long id){
+        Article article = articleDao.findById(id);
+        articleDao.delete(article);
+        return "redirect:/allarticles";
     }
 
     @ModelAttribute("articles")
@@ -156,13 +176,4 @@ public class ArticleController {
         return authors;
     }
 }
-
-//    wyświetlić listę wszystkich artykułów
-//    dodać artykuł
-//    usunąć artykuł
-//    edytować artykuł
-//
-//    Dla akcji dodawania oraz edycji utwórz formularz.
-//        Formularz tworzenia ma zawierać pola z możliwością wyboru autora.
-//        Formularz tworzenia ma zawierać pola z możliwością wyboru wielu kategorii.
-//        Dodaj konwertery dla klas Author oraz Category.
+//created updated everytime i edit article. wHY?
