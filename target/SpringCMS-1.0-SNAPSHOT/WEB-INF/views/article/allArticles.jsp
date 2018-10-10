@@ -19,6 +19,9 @@
         <li>
             <b>${article.title}</b> ${article.author.firstName} ${article.author.lastName}, created: ${article.created}
             <p>${article.content}</p>
+            <p><b>Categories:</b> <c:forEach items="${article.categories}" var="category">
+                ${category.name},
+            </c:forEach> </p>
             <p>Edit article: <a href="/editarticle/${article.id}">Click!</a> </p>
             <p>Delete article: <a href="/deletearticle/${article.id}">Click!</a> </p>
         </li>
