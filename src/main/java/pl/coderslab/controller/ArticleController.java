@@ -142,6 +142,7 @@ public class ArticleController {
     public String editArticle(Model model, @PathVariable long id){
         Article article = articleDao.findById(id);
         article.setId(id);
+        model.addAttribute("categoriesInArticle", articleDao.findCatInArt(article));
         model.addAttribute("article", article);
         model.addAttribute("created", article.getCreated());
         return "article/articleEditForm";
@@ -175,5 +176,6 @@ public class ArticleController {
         List<Author> authors = authorDao.findAll();
         return authors;
     }
+
 }
 //created updated everytime i edit article. wHY?

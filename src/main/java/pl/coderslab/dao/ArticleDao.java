@@ -3,6 +3,7 @@ package pl.coderslab.dao;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import pl.coderslab.entity.Article;
+import pl.coderslab.entity.Category;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -40,5 +41,11 @@ public class ArticleDao {
         Query query = entityManager.createQuery("select a from Article a");
         List<Article> articles = query.getResultList();
         return articles;
+    }
+    public List<Category> findCatInArt(Article article){
+        Query query = entityManager.createQuery("select c from Category c where :article member of c.articles");
+        query.setParameter("article",article);
+        List<Category> categories = query.getResultList();
+        return categories;
     }
 }

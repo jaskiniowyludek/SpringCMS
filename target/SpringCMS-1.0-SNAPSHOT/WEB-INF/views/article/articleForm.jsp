@@ -23,7 +23,7 @@
     Title: <form:input path="title" placeholder="Type title"/>
     Content of an article: <form:textarea path="content"/>
     Author: <form:select path="author.id" items="${authors}" itemValue="id" itemLabel="lastName"/>
-    Categories: <form:select path="categories" items="${categories}" itemLabel="name" itemValue="id" multiple="true"/>
+    Categories: <form:checkboxes path="categories" items="${categories}" multiple="true" itemLabel="name" itemValue="id"/>
     <input type="submit" value="Save">
 </form:form>
 </body>

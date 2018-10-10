@@ -13,6 +13,7 @@
 </head>
 <body>
 <c:import url="/WEB-INF/views/fragments/header.jsp"/>
+<p><a href="/addarticle">Add new article</a> </p>
 <h1>All articles:</h1>
 <ul>
     <c:forEach items="${articles}" var="article">
@@ -23,10 +24,10 @@
                 ${category.name},
             </c:forEach> </p>
             <p>Edit article: <a href="/editarticle/${article.id}">Click!</a> </p>
-            <p>Delete article: <a href="/deletearticle/${article.id}">Click!</a> </p>
+            <p>Delete article: <a href="/deletearticle/${article.id}"
+                                  onclick="return confirm('Are you sure you want to delete this category?');">Click!</a> </p>
         </li>
     </c:forEach>
 </ul>
-<p><a href="/addarticle">Add new article</a> </p>
 </body>
 </html>
