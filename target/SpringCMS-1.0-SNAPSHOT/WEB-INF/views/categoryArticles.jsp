@@ -21,7 +21,7 @@
 </c:forEach>
 </ul>
 <p>
-    <a href="/articles">Come back to all articles</a>
+    <a href="/allarticles">Come back to all articles</a>
 </p>
 </body>
 </html>

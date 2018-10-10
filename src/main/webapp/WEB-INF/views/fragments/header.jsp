@@ -16,7 +16,7 @@
     </style>
 </head>
 <body>
-<div><a href="/index.jsp">Home</a> </div>
+<div><a href="/">Home</a> </div>
 <div><a href="/allarticles">Articles</a> </div>
 <div><a href="/allcategories">Categories</a> </div>
 <div><a href="/allauthors">Authors</a> </div>
