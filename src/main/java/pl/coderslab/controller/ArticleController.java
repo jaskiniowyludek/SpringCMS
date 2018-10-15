@@ -81,8 +81,12 @@ public class ArticleController {
                 "After a week or so of this, they learned some deeply unsettling news. Their master, a rebel colonel " +
                         "named Charles Mallory, was planning to send them even farther from home, to help build " +
                         "fortifications in North Carolina. That was when the three slaves decided to " +
+                        "fortifications in North Carolina. That was when the three slaves decided to " +
+                        "fortifications in North Carolina. That was when the three slaves decided to " +
                         "leave the Confederacy and try their luck, just across the water, with the Union.",
                 "A Thai soccer team of 12 boys and their soccer coach were trapped in the Tham " +
+                        "Luang Nang Non cave near Chiang Rai, Thailand after monsoon rains cae now tr018.Born in Germany, " +
+                        "Luang Nang Non cave near Chiang Rai, Thailand after monsoon rains cae now tr018.Born in Germany, " +
                         "Luang Nang Non cave near Chiang Rai, Thailand after monsoon rains cae now tr018.Born in Germany, " +
                         "raised in Montana, now " +
                         "living in New York, comedian Reggie Watts describes his style as “culture sampling.”",
@@ -95,6 +99,7 @@ public class ArticleController {
                         "fleets, but stealthily, under cover of darkness, in a stolen boat.",
                 "On May 23, 1861, little more than a month into the Civil War, three young black men rowed across the " +
                         "James River in Virginia and claimed asylum in a Union-held citadel. Fort Monroe, Va., a " +
+                        "fishhook-shaped spit of land near the mouth of the Chesapeake Bay, had been a military post " +
                         "fishhook-shaped spit of land near the mouth of the Chesapeake Bay, had been a military post " +
                         "since the time of the first Jamestown settlers. This spot where the slaves took refuge was also, " +
                         "by remarkable coincidence, the spot where slavery first took root, one summer day in 1619, " +
@@ -128,7 +133,7 @@ public class ArticleController {
             List<Category> arr = new ArrayList<>();
             if(i<3) arr.add(categoryDao.findById(random.nextInt(10)+1));
             if(i<5) arr.add(categoryDao.findById(random.nextInt(10)+1));
-            if(i<9) arr.add(categoryDao.findById(random.nextInt(10)+1));
+            if(i<10) arr.add(categoryDao.findById(random.nextInt(10)+1));
             article.setCategories(arr);
             articleDao.save(article);
         }

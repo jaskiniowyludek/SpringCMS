@@ -7,6 +7,7 @@
 </head>
 <body>
 <c:import url="/WEB-INF/views/fragments/header.jsp"/>
+<p><a href="/addauthor">Add new author</a> </p>
 <h1>All authors:</h1>
 <ul>
     <c:forEach items="${authors}" var="author">
@@ -17,6 +18,6 @@
         </li>
     </c:forEach>
 </ul>
-<p><a href="/addauthor">Add new author</a> </p>
+
 </body>
 </html>

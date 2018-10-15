@@ -1,6 +1,7 @@
 package pl.coderslab.entity;
 
 import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -25,10 +26,11 @@ public class Article {
     private Author author;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @NotNull(message = "At least one category")
+    @NotEmpty(message = "At least one category")
     private List<Category> categories = new ArrayList<>();
+    @Column(columnDefinition = "TEXT")
     @NotNull(message = "Please, type content")
-    @Size(min = 500, message = "Min lenght 500!")
+    @Size(min = 300, message = "Min lenght 300!")
     private String content;
     @Column(updatable = false)
     private String created;

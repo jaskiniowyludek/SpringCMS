@@ -1,5 +1,7 @@
 package pl.coderslab.entity;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
@@ -10,9 +12,9 @@ public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @NotNull(message = "Cannot be null")
+    @NotBlank(message = "Cannot be null")
     private String firstName;
-    @NotNull(message = "Cannto be null")
+    @NotBlank(message = "Cannto be null")
     private String lastName;
 
     public Author(){}

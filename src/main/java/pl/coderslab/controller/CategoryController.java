@@ -32,7 +32,7 @@ public class CategoryController {
         categories.add(new Category("sport", "about sport"));
         categories.add(new Category("gossips", "about celebrieties"));
         categories.add(new Category("science", "about science"));
-        categories.add(new Category("word", "news from word"));
+        categories.add(new Category("from word", "news from word"));
         categories.add(new Category("weather", "about weather"));
         categories.add(new Category("politics", "about politics"));
         categories.add(new Category("discovery", "about discoveries"));
