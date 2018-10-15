@@ -21,7 +21,9 @@
 <c:import url="/WEB-INF/views/fragments/header.jsp"/>
 <form:form modelAttribute="category" method="post">
    Name: <form:input path="name" placeholder="Type name"/>
+        <form:errors path="name"/>
     Description: <form:textarea path="description" rows="10" cols="20"/>
+                <form:errors path="description"/>
     <input type="submit" value="Save">
 </form:form>
 </body>

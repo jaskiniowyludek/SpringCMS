@@ -22,7 +22,9 @@
     <form:form modelAttribute="author" method="post">
         <form:hidden path="id"/>
         <form:input path="firstName"/>
+        <form:errors path="firstName"/>
         <form:input path="lastName"/>
+        <form:errors path="lastName"/>
         <input type="submit" value="Save"/>
     </form:form>
 </body>

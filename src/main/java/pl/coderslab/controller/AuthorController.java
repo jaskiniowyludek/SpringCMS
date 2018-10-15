@@ -3,10 +3,13 @@ package pl.coderslab.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.dao.AuthorDao;
 import pl.coderslab.entity.Author;
 
+import javax.validation.Valid;
+import javax.validation.Validator;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -15,6 +18,8 @@ import java.util.List;
 public class AuthorController {
     @Autowired
     private AuthorDao authorDao;
+    @Autowired
+    Validator validator;
 
     @RequestMapping("/add10authors")
     @ResponseBody
@@ -54,7 +59,10 @@ public class AuthorController {
     }
 
     @PostMapping("addauthor")
-    public String postAddAuthor(@ModelAttribute Author author){
+    public String postAddAuthor(@Valid Author author, BindingResult result){
+        if (result.hasErrors()){
+            return "author/authorForm";
+        }
         authorDao.save(author);
         return "redirect:allauthors";
     }
@@ -66,7 +74,10 @@ public class AuthorController {
         return "author/authorEditForm";
     }
     @PostMapping("/editauthor/{id}")
-    public String postEditAuthor(@ModelAttribute Author author){
+    public String postEditAuthor(@Valid Author author, BindingResult result){
+        if (result.hasErrors()){
+            return "author/authorEditForm";
+        }
         authorDao.update(author);
         return "redirect:/allauthors";
     }

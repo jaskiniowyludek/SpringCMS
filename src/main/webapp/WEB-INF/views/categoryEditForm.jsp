@@ -22,7 +22,9 @@
 <form:form method="post" modelAttribute="category">
     <form:hidden path="id"/>
     Name: <form:input path="name"/>
+            <form:errors path="name"/>
     Description: <form:textarea path="description"/>
+                <form:errors path="description"/>
     <input type="submit" value="Save">
 </form:form>
 </body>

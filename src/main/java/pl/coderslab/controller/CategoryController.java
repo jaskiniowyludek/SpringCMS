@@ -3,12 +3,15 @@ package pl.coderslab.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.dao.ArticleDao;
 import pl.coderslab.dao.CategoryDao;
 import pl.coderslab.entity.Article;
 import pl.coderslab.entity.Category;
 
+import javax.validation.Valid;
+import javax.validation.Validator;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -19,6 +22,8 @@ public class CategoryController {
     private CategoryDao categoryDao;
     @Autowired
     private ArticleDao articleDao;
+    @Autowired
+    Validator validator;
 
     @RequestMapping("/add10categories")
     @ResponseBody
@@ -68,7 +73,10 @@ public class CategoryController {
         return "categoryform";
     }
     @PostMapping("/addcategory")
-    public String proceedAddCategory(@ModelAttribute Category category){
+    public String proceedAddCategory(@Valid Category category, BindingResult result){
+        if (result.hasErrors()){
+            return "categoryform";
+        }
         categoryDao.save(category);
         return "redirect:allcategories";
     }
@@ -86,7 +94,10 @@ public class CategoryController {
         return "categoryEditForm";
     }
     @PostMapping("/editcategory/{id}")
-    public String postEditCategory(@ModelAttribute Category category){
+    public String postEditCategory(@Valid Category category, BindingResult result){
+        if (result.hasErrors()){
+            return "categoryEditForm";
+        }
         categoryDao.update(category);
         return "redirect:/allcategories";
     }

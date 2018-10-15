@@ -3,6 +3,7 @@ package pl.coderslab.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.dao.ArticleDao;
 import pl.coderslab.dao.AuthorDao;
@@ -11,6 +12,8 @@ import pl.coderslab.entity.Article;
 import pl.coderslab.entity.Author;
 import pl.coderslab.entity.Category;
 
+import javax.validation.Valid;
+import javax.validation.Validator;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,6 +28,8 @@ public class ArticleController {
     private AuthorDao authorDao;
     @Autowired
     private CategoryDao categoryDao;
+    @Autowired
+    Validator validator;
 
     @RequestMapping("/add10articles")
     @ResponseBody
@@ -62,7 +67,15 @@ public class ArticleController {
                         "the “infinite and unknowable” heading." +
                         " But to say that it was a religious experience would be wrong. It was better.",
                 " If you want to know the meaning of life, science probably can't help you much better" +
+                " If you want to know the meaning of life, science probably can't help you much better" +
+                " If you want to know the meaning of life, science probably can't help you much better" +
+                " If you want to know the meaning of life, science probably can't help you much better" +
+                " If you want to know the meaning of life, science probably can't help you much better" +
                         " than Kermit therd, Kermit says, \"Always be yourself. Never tre of advnt.\")\n",
+                " Today is the second (and last) Friday the 13th of the year. Even though the date" +
+                " Today is the second (and last) Friday the 13th of the year. Even though the date" +
+                " Today is the second (and last) Friday the 13th of the year. Even though the date" +
+                " Today is the second (and last) Friday the 13th of the year. Even though the date" +
                 " Today is the second (and last) Friday the 13th of the year. Even though the date" +
                         " is known throughout Wes really jue is Right?\n",
                 "After a week or so of this, they learned some deeply unsettling news. Their master, a rebel colonel " +
@@ -133,7 +146,10 @@ public class ArticleController {
         return "article/articleForm";
     }
     @PostMapping("/addarticle")
-    public String postAddArticle(@ModelAttribute Article article){
+    public String postAddArticle(@Valid Article article, BindingResult result){
+        if (result.hasErrors()){
+            return "article/articleForm";
+        }
         article.setCreated(LocalDateTime.now().toString());
         articleDao.save(article);
         return "redirect:allarticles";
@@ -148,9 +164,11 @@ public class ArticleController {
         return "article/articleEditForm";
     }
     @PostMapping("/editarticle/{id}")
-    public String postEditArticle(@ModelAttribute Article article, @RequestParam String created){
+    public String postEditArticle(@Valid Article article, BindingResult result){
+        if (result.hasErrors()){
+            return "article/articleEditForm";
+        }
         article.setUpdated(LocalDateTime.now().toString());
-        article.setCreated(created);
         articleDao.update(article);
         return "redirect:/allarticles";
     }
