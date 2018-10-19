@@ -3,13 +3,13 @@ package pl.coderslab.entity;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
 import pl.coderslab.validator.MaxNumberCategories;
-import pl.coderslab.validator.ValidationDraft;
+import pl.coderslab.validator.ValidationArticle;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import javax.validation.groups.Default;
 import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,19 +21,19 @@ public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @NotBlank(message = "Please, type title",groups = ValidationDraft.class)
-    @Size(max = 200, message = "Max lenght 200!!")
+    @NotBlank(message = "Please, type title",groups = {ValidationArticle.class, Default.class})
+    @Size(max = 200, message = "Max lenght 200!!",groups = {ValidationArticle.class, Default.class})
     private String title;
     @ManyToOne
     private Author author;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @NotEmpty(message = "At least one category")
-    @MaxNumberCategories(4)
+    @NotEmpty(message = "At least one category", groups = ValidationArticle.class)
+    @MaxNumberCategories(value = 4, groups = ValidationArticle.class)
     private List<Category> categories = new ArrayList<>();
     @Column(columnDefinition = "TEXT")
-    @NotNull(message = "Please, type content", groups = ValidationDraft.class)
-    @Size(min = 300, message = "Min lenght 300!", groups = ValidationDraft.class)
+    @NotNull(message = "Please, type content",groups = {ValidationArticle.class, Default.class})
+    @Size(min = 300, message = "Min lenght 300!",groups = {ValidationArticle.class, Default.class})
     private String content;
     @Column(updatable = false)
     private String created;

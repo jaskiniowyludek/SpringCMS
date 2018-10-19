@@ -16,7 +16,7 @@
 <p><a href="/addarticle">Add new article</a> </p>
 <h1>All articles:</h1>
 <ul>
-    <c:forEach items="${articles}" var="article">
+    <c:forEach items="${articlesD}" var="article">
         <li>
             <b>${article.title}</b> ${article.author.firstName} ${article.author.lastName}, created: ${article.created}
             <p>${article.content}</p>

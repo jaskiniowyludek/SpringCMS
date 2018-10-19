@@ -7,12 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3afa0d5e-b0d8-48fd-98b3-405a41e2bdec" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/ArticleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/ArticleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/DraftController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/DraftController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/entity/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/entity/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/validator/ValidationDraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/validator/ValidationArticle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/allArticles.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/allArticles.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleEditForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleEditForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fragments/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fragments/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringCMS-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/controller/DraftController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringCMS-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/controller/DraftController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringCMS-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/entity/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringCMS-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/entity/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringCMS-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/validator/ValidationDraft.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/coderslab/controller/DraftController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/coderslab/controller/DraftController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/coderslab/entity/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/coderslab/entity/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/coderslab/validator/ValidationDraft.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,14 +34,38 @@
       <file leaf-file-name="Article.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/entity/Article.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="35" column="80" selection-start-line="35" selection-start-column="80" selection-end-line="35" selection-end-column="80" />
+            <state relative-caret-position="-30">
+              <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1262#1263#0" expanded="true" />
-                <element signature="e#1290#1291#0" expanded="true" />
-                <element signature="e#1333#1334#0" expanded="true" />
-                <element signature="e#1367#1368#0" expanded="true" />
+                <element signature="e#1378#1379#0" expanded="true" />
+                <element signature="e#1406#1407#0" expanded="true" />
+                <element signature="e#1449#1450#0" expanded="true" />
+                <element signature="e#1483#1484#0" expanded="true" />
+                <element signature="e#1541#1542#0" expanded="true" />
+                <element signature="e#1569#1570#0" expanded="true" />
+                <element signature="e#1595#1596#0" expanded="true" />
+                <element signature="e#1620#1621#0" expanded="true" />
+                <element signature="e#1652#1653#0" expanded="true" />
+                <element signature="e#1680#1681#0" expanded="true" />
+                <element signature="e#1722#1723#0" expanded="true" />
+                <element signature="e#1756#1757#0" expanded="true" />
+                <element signature="e#1789#1790#0" expanded="true" />
+                <element signature="e#1818#1819#0" expanded="true" />
+                <element signature="e#1862#1863#0" expanded="true" />
+                <element signature="e#1898#1899#0" expanded="true" />
+                <element signature="e#1943#1944#0" expanded="true" />
+                <element signature="e#1976#1977#0" expanded="true" />
+                <element signature="e#2036#2037#0" expanded="true" />
+                <element signature="e#2080#2081#0" expanded="true" />
+                <element signature="e#2114#2115#0" expanded="true" />
+                <element signature="e#2144#2145#0" expanded="true" />
+                <element signature="e#2190#2191#0" expanded="true" />
+                <element signature="e#2228#2229#0" expanded="true" />
+                <element signature="e#2262#2263#0" expanded="true" />
+                <element signature="e#2292#2293#0" expanded="true" />
+                <element signature="e#2554#2555#0" expanded="true" />
+                <element signature="e#2584#2585#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -44,29 +74,11 @@
       <file leaf-file-name="DraftController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/DraftController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+            <state relative-caret-position="51">
+              <caret line="52" column="53" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="draftEditForm.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/draft/draftEditForm.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="draftForm.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/draft/draftForm.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -74,11 +86,20 @@
       <file leaf-file-name="ArticleController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/ArticleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="184" column="5" selection-start-line="147" selection-start-column="4" selection-end-line="184" selection-end-column="5" />
+            <state relative-caret-position="112">
+              <caret line="151" column="55" selection-start-line="151" selection-start-column="55" selection-end-line="151" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="allArticles.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/allArticles.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -125,19 +146,19 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/CategoryController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/author/allAuthors.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/entity/Author.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/ArticleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/validator/MaxNumberCategoriesValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/validator/MaxNumberCategories.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/ArticleDao.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/allArticles.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/draft/allDrafts.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleEditForm.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fragments/header.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleForm.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/entity/Article.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/DraftController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/draft/draftEditForm.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/draft/draftForm.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/DraftController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/entity/Article.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/ArticleController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/allArticles.jsp" />
       </list>
     </option>
   </component>
@@ -514,12 +535,12 @@
       <workItem from="1539080802837" duration="21321000" />
       <workItem from="1539190276210" duration="6084000" />
       <workItem from="1539598980498" duration="7466000" />
-      <workItem from="1539936676335" duration="5967000" />
+      <workItem from="1539936676335" duration="7963000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60866000" />
+    <option name="totallyTimeSpent" value="62862000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1217" height="812" extended-state="6" />
@@ -629,10 +650,34 @@
           <caret line="86" column="1" lean-forward="true" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1262#1263#0" expanded="true" />
-            <element signature="e#1290#1291#0" expanded="true" />
-            <element signature="e#1333#1334#0" expanded="true" />
-            <element signature="e#1367#1368#0" expanded="true" />
+            <element signature="e#1378#1379#0" expanded="true" />
+            <element signature="e#1406#1407#0" expanded="true" />
+            <element signature="e#1449#1450#0" expanded="true" />
+            <element signature="e#1483#1484#0" expanded="true" />
+            <element signature="e#1541#1542#0" expanded="true" />
+            <element signature="e#1569#1570#0" expanded="true" />
+            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="e#1620#1621#0" expanded="true" />
+            <element signature="e#1652#1653#0" expanded="true" />
+            <element signature="e#1680#1681#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#1756#1757#0" expanded="true" />
+            <element signature="e#1789#1790#0" expanded="true" />
+            <element signature="e#1818#1819#0" expanded="true" />
+            <element signature="e#1862#1863#0" expanded="true" />
+            <element signature="e#1898#1899#0" expanded="true" />
+            <element signature="e#1943#1944#0" expanded="true" />
+            <element signature="e#1976#1977#0" expanded="true" />
+            <element signature="e#2036#2037#0" expanded="true" />
+            <element signature="e#2080#2081#0" expanded="true" />
+            <element signature="e#2114#2115#0" expanded="true" />
+            <element signature="e#2144#2145#0" expanded="true" />
+            <element signature="e#2190#2191#0" expanded="true" />
+            <element signature="e#2228#2229#0" expanded="true" />
+            <element signature="e#2262#2263#0" expanded="true" />
+            <element signature="e#2292#2293#0" expanded="true" />
+            <element signature="e#2554#2555#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -690,10 +735,34 @@
           <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1262#1263#0" expanded="true" />
-            <element signature="e#1290#1291#0" expanded="true" />
-            <element signature="e#1333#1334#0" expanded="true" />
-            <element signature="e#1367#1368#0" expanded="true" />
+            <element signature="e#1378#1379#0" expanded="true" />
+            <element signature="e#1406#1407#0" expanded="true" />
+            <element signature="e#1449#1450#0" expanded="true" />
+            <element signature="e#1483#1484#0" expanded="true" />
+            <element signature="e#1541#1542#0" expanded="true" />
+            <element signature="e#1569#1570#0" expanded="true" />
+            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="e#1620#1621#0" expanded="true" />
+            <element signature="e#1652#1653#0" expanded="true" />
+            <element signature="e#1680#1681#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#1756#1757#0" expanded="true" />
+            <element signature="e#1789#1790#0" expanded="true" />
+            <element signature="e#1818#1819#0" expanded="true" />
+            <element signature="e#1862#1863#0" expanded="true" />
+            <element signature="e#1898#1899#0" expanded="true" />
+            <element signature="e#1943#1944#0" expanded="true" />
+            <element signature="e#1976#1977#0" expanded="true" />
+            <element signature="e#2036#2037#0" expanded="true" />
+            <element signature="e#2080#2081#0" expanded="true" />
+            <element signature="e#2114#2115#0" expanded="true" />
+            <element signature="e#2144#2145#0" expanded="true" />
+            <element signature="e#2190#2191#0" expanded="true" />
+            <element signature="e#2228#2229#0" expanded="true" />
+            <element signature="e#2262#2263#0" expanded="true" />
+            <element signature="e#2292#2293#0" expanded="true" />
+            <element signature="e#2554#2555#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -897,7 +966,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/validator/ValidationDraft.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/validator/ValidationArticle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
@@ -932,37 +1001,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/entity/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="35" column="80" selection-start-line="35" selection-start-column="80" selection-end-line="35" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1262#1263#0" expanded="true" />
-            <element signature="e#1290#1291#0" expanded="true" />
-            <element signature="e#1333#1334#0" expanded="true" />
-            <element signature="e#1367#1368#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/ArticleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="184" column="5" selection-start-line="147" selection-start-column="4" selection-end-line="184" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/allArticles.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="103" selection-start-line="27" selection-start-column="103" selection-end-line="27" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fragments/header.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -973,13 +1011,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/DraftController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/draft/draftForm.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -990,10 +1025,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/draft/draftForm.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/DraftController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+        <state relative-caret-position="51">
+          <caret line="52" column="53" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/entity/Article.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1378#1379#0" expanded="true" />
+            <element signature="e#1406#1407#0" expanded="true" />
+            <element signature="e#1449#1450#0" expanded="true" />
+            <element signature="e#1483#1484#0" expanded="true" />
+            <element signature="e#1541#1542#0" expanded="true" />
+            <element signature="e#1569#1570#0" expanded="true" />
+            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="e#1620#1621#0" expanded="true" />
+            <element signature="e#1652#1653#0" expanded="true" />
+            <element signature="e#1680#1681#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#1756#1757#0" expanded="true" />
+            <element signature="e#1789#1790#0" expanded="true" />
+            <element signature="e#1818#1819#0" expanded="true" />
+            <element signature="e#1862#1863#0" expanded="true" />
+            <element signature="e#1898#1899#0" expanded="true" />
+            <element signature="e#1943#1944#0" expanded="true" />
+            <element signature="e#1976#1977#0" expanded="true" />
+            <element signature="e#2036#2037#0" expanded="true" />
+            <element signature="e#2080#2081#0" expanded="true" />
+            <element signature="e#2114#2115#0" expanded="true" />
+            <element signature="e#2144#2145#0" expanded="true" />
+            <element signature="e#2190#2191#0" expanded="true" />
+            <element signature="e#2228#2229#0" expanded="true" />
+            <element signature="e#2262#2263#0" expanded="true" />
+            <element signature="e#2292#2293#0" expanded="true" />
+            <element signature="e#2554#2555#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/ArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="151" column="55" selection-start-line="151" selection-start-column="55" selection-end-line="151" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/allArticles.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
         </state>
       </provider>
     </entry>

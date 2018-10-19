@@ -141,7 +141,15 @@ public class ArticleController {
     }
 
     @RequestMapping("/allarticles")
-    public String showAllArticles(){
+    public String showAllArticles(Model model){
+        List<Article> articles = articleDao.findAll();
+        List<Article> withoutDrafts = new ArrayList<>();
+        for (Article a:articles){
+            if (a.isDraft()==false){
+                withoutDrafts.add(a);
+            }
+        }
+        model.addAttribute("articlesD", withoutDrafts);
         return "article/allArticles";
     }
 
