@@ -2,6 +2,7 @@ package pl.coderslab.entity;
 
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
+import pl.coderslab.validator.MaxNumberCategories;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -27,6 +28,7 @@ public class Article {
 
     @ManyToMany(fetch = FetchType.EAGER)
     @NotEmpty(message = "At least one category")
+    @MaxNumberCategories(4)
     private List<Category> categories = new ArrayList<>();
     @Column(columnDefinition = "TEXT")
     @NotNull(message = "Please, type content")
