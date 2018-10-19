@@ -25,7 +25,7 @@
             </c:forEach> </p>
             <p>Edit article: <a href="/editarticle/${article.id}">Click!</a> </p>
             <p>Delete article: <a href="/deletearticle/${article.id}"
-                                  onclick="return confirm('Are you sure you want to delete this category?');">Click!</a> </p>
+                                  onclick="return confirm('Are you sure you want to delete this article?');">Click!</a> </p>
         </li>
     </c:forEach>
 </ul>

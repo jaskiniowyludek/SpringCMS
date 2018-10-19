@@ -48,4 +48,10 @@ public class ArticleDao {
         List<Category> categories = query.getResultList();
         return categories;
     }
+
+    public List<Article> findDrafts(){
+        Query query = entityManager.createQuery("select a from Article a where a.draft = true ");
+        List<Article> drafts = query.getResultList();
+        return drafts;
+    }
 }

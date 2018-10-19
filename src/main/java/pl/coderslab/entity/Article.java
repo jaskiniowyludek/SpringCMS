@@ -3,6 +3,7 @@ package pl.coderslab.entity;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
 import pl.coderslab.validator.MaxNumberCategories;
+import pl.coderslab.validator.ValidationDraft;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -20,7 +21,7 @@ public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @NotBlank(message = "Please, type title")
+    @NotBlank(message = "Please, type title",groups = ValidationDraft.class)
     @Size(max = 200, message = "Max lenght 200!!")
     private String title;
     @ManyToOne
@@ -31,13 +32,23 @@ public class Article {
     @MaxNumberCategories(4)
     private List<Category> categories = new ArrayList<>();
     @Column(columnDefinition = "TEXT")
-    @NotNull(message = "Please, type content")
-    @Size(min = 300, message = "Min lenght 300!")
+    @NotNull(message = "Please, type content", groups = ValidationDraft.class)
+    @Size(min = 300, message = "Min lenght 300!", groups = ValidationDraft.class)
     private String content;
     @Column(updatable = false)
     private String created;
 
     private String updated;
+
+    private boolean draft;
+
+    public boolean isDraft() {
+        return draft;
+    }
+
+    public void setDraft(boolean draft) {
+        this.draft = draft;
+    }
 
     public Article(){}
 
